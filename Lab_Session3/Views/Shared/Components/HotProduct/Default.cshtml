@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Lab_Session3.Models.Product>
+
+<div class="section-title">
+    Sản phẩm Hot
+</div>
+
+<div class="product-grid">
+    @foreach (var product in Model)
+    {
+        <div class="product-card">
+            <img src="@product.Image" alt="@product.Title" />
+
+            <h5>@product.Title</h5>
+        </div>
+    }
+</div>

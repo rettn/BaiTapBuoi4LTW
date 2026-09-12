@@ -1,0 +1,18 @@
+﻿using Lab_Session3.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Lab_Session3.Controllers
+{
+    public class ProductController : Controller
+    {
+        protected Product products = new Product();
+        protected DanhMuc danhmucs = new DanhMuc();
+
+        public IActionResult Index()
+        {
+            var product = products.GetProductList();
+            ViewBag.DanhMuc = danhmucs.GetDanhMucs();
+            return View(product);
+        }
+    }
+}

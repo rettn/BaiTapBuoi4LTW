@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Lab_Session3.Models.DanhMuc>
+
+<div class="category-box">
+    <div class="category-title">
+        Danh mục sản phẩm
+    </div>
+
+    <ul class="category-list">
+        @foreach (var danhmuc in Model)
+        {
+            <li>
+                <a href="#">@danhmuc.Title</a>
+            </li>
+        }
+    </ul>
+</div>

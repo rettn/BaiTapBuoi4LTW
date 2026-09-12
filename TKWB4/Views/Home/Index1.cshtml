@@ -1,0 +1,63 @@
+﻿<h2>Razor syntax</h2>
+
+<!-- Single statement block -->
+@{
+	var total = 7000; 
+}
+
+@{
+	var myMessage = "Nguyen Trong Tannnnnnnnnnnnnnnnnn";
+}
+
+<!--In line expressions -->
+<p> Tai khoan cua ban dang co: & @total</p>
+<p>Cau noi de doi cua Nguyen Trong Tan: @myMessage </p>
+
+<!-- Multi statement block -->
+@{
+	var greeting = "Chuc ban thanh cong";
+	var weekDay = DateTime.Now.DayOfWeek;
+	var greetingMessage = greeting + "Hom nay la: " + weekDay;
+}
+
+<p>Loi chuc: @greetingMessage</p>
+
+<h2>Cau truc If else</h2>
+
+@if (total >= 5000)
+{
+	<p>Ban nam trong so 30% nguoi giau nhat the gioi</p>
+} 
+else if (total >= 2000)
+{
+	<p> Ban nam trong so 50% nguoi giau nhat the gioi</p>
+}
+else
+{
+	<p>Chua co so lieu thong ke</p>
+}
+@{
+	if(total % 2 == 0)
+	{
+		<p>So tien trong tai khoan ban la so chan</p>
+	}
+	else
+	{
+		<p>So tien trong tai khoan ban la so le</p>
+	}
+}
+
+<h2>Cau truc lap</h2>
+@{
+	for (int i = 0; i < 10; i ++)
+	{
+		if (i % 2 == 0)
+		{
+			<span class="btn btn-danger">@i</span>
+		} 
+		else
+		{
+			<span class="btn btn-success  ">@i</span>	
+		}
+	}
+}
